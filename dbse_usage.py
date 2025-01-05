@@ -44,17 +44,21 @@ if __name__ == "__main__":
     # -----------------------------------------------------------------------------------------------------
     # Parameters
     # -----------------------------------------------------------------------------------------------------
-    # Algorithm and Model
-    P.te_feature_selection_on = True # If true features are selected according to the features given
-    P.tr_remove_outliers = True # If true outliers are removed per feature heat map
-    P.te_smoothing_side = 51 # smoothing parameter
-    P.tr_kernel_size = 11 # Kernel size
-    P.te_percentage_side_fine = 0.1 # Percentage
-    visualize_heatmap = False # If true for each class the heatmaps of each feature are shown
+
+    # Training parameters
+    P.tr_remove_outliers = True  # If true outliers are removed per feature heat map
+    P.tr_kernel_size = 11  # Kernel size
+    P.te_feature_selection_on = True  # If true features are selected according to the features given
+
+    # Testing parameters
+    P.te_smoothing_side = 51  # smoothing parameter
+    P.te_percentage_side_fine = 0.1  # Percentage
+    visualize_heatmap = False  # If true for each class the heatmaps of each feature are shown
+
     # Application
     model_file = "trained_model.h66"
-    run_training = True # if True run Training
-    run_testing = True  # if True run Testing
+    run_training = True  # if True run Training
+    run_testing = False  # if True run Testing
 
     # -----------------------------------------------------------------------------------------------------
     #   Load Dataset

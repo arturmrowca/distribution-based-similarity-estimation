@@ -1,5 +1,4 @@
-from dbse.BaseNode import BaseNode
-from dbse.tools.Logging import Logging
+from dbse.tools.logging import Logging
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -9,7 +8,7 @@ import seaborn
 import matplotlib.pyplot as plt
 
 
-class ClusterTraining(BaseNode):
+class ClusterTraining(object):
     """
     Assigns a cluster to the training data for all critical values only (i.e. where CRIT=1)
     """
@@ -63,20 +62,6 @@ class ClusterTraining(BaseNode):
         self._field_out_cluster_storage = field_out_cluster_storage
 
         super().__init__()
-
-    def check_params(self):
-        """
-        Checks the parameter dictionary matches the requirements.
-        :return: True if the parameters match the requirements, else False.
-        """
-
-    def check_data(self, data):
-        """
-        Checks if the given data dictionary matches the requirements.
-        :param data: the data dictionary to be checked
-        :return: True if the data match the requirements, else False.
-        """
-        #TODO
 
     def run(self, data_in):
         super().run(data_in)  # do not remove this!
